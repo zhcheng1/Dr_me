@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from rest_framework import generics
-from apps.default.serializers import *
+from serializers import *
 
 
 class DoctorList(generics.ListAPIView):
@@ -14,3 +14,22 @@ class DoctorDetail(generics.RetrieveUpdateDestroyAPIView):
 class UserInfoList(generics.ListAPIView):
     serializer_class = UserInfoSerializer
     queryset = UserInfo.objects.all()
+
+class ReviewList(generics.ListAPIView):
+    serializer_class = ReviewSerializer
+    queryset = Review.objects.all()
+
+
+class AppointmentList(generics.ListAPIView):
+    serializer_class = AppointmentSerializer
+    queryset = Appointment.objects.all()
+
+
+class ReviewUpdate(generics.RetrieveUpdateDestroyAPIView):
+    serializer_class = ReviewSerializer
+    queryset = Review.objects.all()
+
+
+class AppointmentUpdate(generics.RetrieveUpdateDestroyAPIViewAPIView):
+    serializer_class = AppointmentSerializer
+    queryset = Appointment.objects.all()
