@@ -30,6 +30,6 @@ class ReviewUpdate(generics.RetrieveUpdateDestroyAPIView):
     queryset = Review.objects.all()
 
 
-class AppointmentUpdate(generics.RetrieveUpdateDestroyAPIViewAPIView):
+class AppointmentUpdate(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = AppointmentSerializer
     queryset = Appointment.objects.all()
