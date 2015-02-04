@@ -1,3 +1,5 @@
 from django.contrib import admin
+from apps.default.models import Doctor, UserInfo
 
-# Register your models here.
+admin.site.register(Doctor)
+admin.site.register(UserInfo)
