@@ -36,7 +36,11 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.default'
+    'apps.default',
+    'apps.authentication',
+    'rest_framework',
+    'corsheaders',
+
 )
 
 MIDDLEWARE_CLASSES = (
@@ -46,12 +50,16 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware'
+
 )
 
 ROOT_URLCONF = 'dr_me.urls'
 
 WSGI_APPLICATION = 'dr_me.wsgi.application'
+
+#set account to replace default User
+AUTH_USER_MODEL = 'authentication.Account'
 
 
 # Database
