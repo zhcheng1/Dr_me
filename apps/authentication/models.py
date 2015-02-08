@@ -40,8 +40,6 @@ class Account(AbstractBaseUser):
     first_name = models.CharField(max_length=40, blank=True)
     last_name = models.CharField(max_length=40, blank=True)
     tagline = models.CharField(max_length=140, blank=True)
-    address = models.TextField(max_length=100)
-    zip_code = models.CharField(max_length=10)
 
     is_admin = models.BooleanField(default=False)
 

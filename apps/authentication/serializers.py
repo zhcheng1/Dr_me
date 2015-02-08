@@ -11,7 +11,7 @@ class AccountSerializer(serializers.ModelSerializer):
         #which model to serialize
         model = Account
         fields = ('id', 'email', 'username', 'created_at', 'updated_at',
-                  'first_name', 'last_name', 'tagline', 'password', 'address', 'zip_code',
+                  'first_name', 'last_name', 'tagline', 'password',
                   'confirm_password',)
         read_only_fields = ('created_at', 'updated_at',)
 
